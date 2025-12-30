@@ -1,0 +1,132 @@
+:root {
+    --bg: #0f172a; --text: #f1f5f9; --text-muted: #94a3b8;
+    --border: #1e293b; --card-bg: #1e293b; --brand: #3b82f6;
+}
+[data-theme="light"] {
+    --bg: #ffffff; --text: #1e293b; --text-muted: #64748b;
+    --border: #e2e8f0; --card-bg: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); transition: 0.3s; overflow-x: hidden; }
+.container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+header { padding: 1.5rem 0; 
+    position: sticky; 
+    top: 0; 
+    background: var(--bg); 
+    z-index: 1000; 
+    border-bottom: 1px solid var(--border);
+    /* Fontos: */
+    display: block; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-weight: 800; font-size: 1.5rem; cursor: pointer; color: var(--brand); }
+
+.nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--text); font-weight: 500; }
+
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; z-index: 1100; }
+.hamburger span { width: 25px; height: 3px; background: var(--text); border-radius: 2px; transition: 0.3s; }
+.hamburger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+.mobile-menu {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+    background: var(--bg); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; z-index: 1050;
+}
+.mobile-menu.active { display: flex; }
+
+.page { display: none; padding: 2rem 0; animation: fadeIn 0.4s; }
+.page.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.blog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.blog-card { background: var(--card-bg); border: 1px solid var(--border); padding: 1.5rem; border-radius: 12px; cursor: pointer; transition: 0.3s; }
+.blog-card:hover { border-color: var(--brand); transform: translateY(-3px); }
+
+.hero-title { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; font-weight: 800; }
+.center { display: flex; justify-content: center; margin: 3rem 0; }
+.btn-primary { background: var(--brand); color: white; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+.btn-secondary { background: transparent; border: 1px solid var(--border); color: var(--text); padding: 12px 24px; border-radius: 8px; cursor: pointer; }
+.btn-back { background: none; border: none; color: var(--brand); cursor: pointer; margin-bottom: 1rem; font-weight: 600; }
+
+.theme-toggle { background: var(--border); border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; color: var(--text); }
+.form-input { width: 100%; padding: 12px; margin-bottom: 1rem; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text); }
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .blog-grid { grid-template-columns: 1fr; }
+}
+/* Mobil Menü - Most már csak a fejléc alatt jelenik meg */
+/* Mobil Menü - Csak egy kis legördülő sáv */
+.mobile-menu {
+    display: none; 
+    position: absolute; 
+    top: 100%; /* Közvetlenül a header alá kerül */
+    left: 0; 
+    width: 100%;
+    background: var(--card-bg); 
+    flex-direction: column; 
+    padding: 20px 0; /* Kisebb belső tér */
+    gap: 1.5rem; 
+    z-index: 1050;
+    border-bottom: 3px solid var(--brand);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    height: auto; /* Ez biztosítja, hogy NE takarja az egész képernyőt! */
+}
+
+.mobile-menu.active { 
+    display: flex; 
+}
+
+/* Menüpontok stílusa mobilra */
+.mobile-menu a { 
+    font-size: 1.1rem; 
+    text-decoration: none; 
+    color: var(--text); 
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+/* Ikon gomb igazítása a mobil menüben */
+.mobile-menu .theme-toggle {
+    margin: 0 auto;
+}
+/* Menüpontok stílusa mobilra */
+.mobile-menu a { 
+    font-size: 1.2rem; 
+    text-decoration: none; 
+    color: var(--text); 
+    font-weight: 600;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu a:hover {
+    background: var(--border);
+    color: var(--brand);
+}
+
+/* Gombok és Ikonok javítása */
+.theme-toggle { 
+    background: var(--border); 
+    border: none; 
+    width: 40px;
+    height: 40px;
+    border-radius: 8px; 
+    cursor: pointer; 
+    color: var(--text); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* A mobil menüben lévő gombot középre tesszük */
+.mobile-menu .theme-toggle {
+    margin: 0 auto;
+}

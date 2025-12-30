@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevSamu.dev</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo" onclick="showPage('home')">DevSamu.dev</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('all-blogs')">Blog</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                <li><button class="theme-toggle" id="desktopThemeBtn" onclick="toggleTheme()">☀️</button></li>
+            </ul>
+            <div class="hamburger" id="hamburgerIcon" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#" onclick="navTo('all-blogs')">Blog</a>
+            <a href="#" onclick="navTo('contact')">Contact</a>
+            <button class="theme-toggle" id="mobileThemeBtn" onclick="toggleTheme()">☀️</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home" class="page active">
+            <h1 class="hero-title">Latest Insights</h1>
+            <div id="latest-posts" class="blog-list"></div>
+            <div class="center"><button class="btn-primary" onclick="showPage('all-blogs')">More Posts</button></div>
+        </section>
+
+        <section id="all-blogs" class="page">
+            <h1 class="hero-title">All Articles</h1>
+            <div id="grid-posts" class="blog-grid"></div>
+            <div class="center"><button class="btn-secondary" onclick="showPage('home')">Show Less</button></div>
+        </section>
+
+        <section id="single-post" class="page">
+            <button class="btn-back" onclick="showPage('all-blogs')">← Back</button>
+            <div id="post-content"></div>
+        </section>
+
+        <section id="contact" class="page">
+            <h1 class="hero-title">Contact</h1>
+            <div class="contact-card">
+                <form action="https://formspree.io/f/xwvkjqde" method="POST">
+                    <input type="text" placeholder="Name" required class="form-input">
+                    <input type="email" placeholder="Email" required class="form-input">
+                    <textarea rows="5" placeholder="Message" required class="form-input"></textarea>
+                    <button type="submit" class="btn-primary" style="width:100%">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
