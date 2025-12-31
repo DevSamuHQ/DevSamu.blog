@@ -1,6 +1,7 @@
 const posts = [
    { id: 8, title: "Learning English", date: "Dec 30, 2025", excerpt: " Today I started learning English.", content: "<h1>Why I Started Learning English</h1><p>If you want to be successful, you need to learn English. Today I started learning English. I made a plan with ChatGPT. It's day 1, so I don't fell much progress yet, but Iwill keep learning.</p>" },
-   { id: 7, title: "v 0.1", date: "Dec 30, 2025", excerpt: "This is the first version of my blog website.", content: "<h1>Version 0.1 Is Here!</h1><p>I created a basic blog website. This is the first version. It's not professional yet, but i'm happy with it. I will post new blogs every week. </p>" },{ id: 6, title: "Deploying to the Edge", date: "Nov 15, 2025", excerpt: "Why edge computing is the future of low-latency web apps.", content: "<h1>Edge Computing</h1><p>Deployment strategies...</p>" },
+   { id: 7, title: "v 0.1", date: "Dec 30, 2025", excerpt: "This is the first version of my blog website.", content: "<h1>Version 0.1 Is Here!</h1><p>I created a basic blog website. This is the first version. It's not professional yet, but i'm happy with it. I will post new blogs every week. </p>" },
+   
     // { id: 5, title: "AI in Software Dev", date: "Nov 02, 2025", excerpt: "Leveraging LLMs to boost your daily coding productivity.", content: "<h1>AI Tools</h1><p>Review of Copilot and Cursor...</p>" },
     // { id: 4, title: "CSS Subgrid Guide", date: "Oct 20, 2025", excerpt: "Aligning complex layouts across nested components perfectly.", content: "<h1>CSS Subgrid</h1><p>The layout revolution...</p>" }
 ];
@@ -50,5 +51,6 @@ function openPost(id) {
         <div style="margin-top:20px">${p.content}</div>`;
     showPage('single-post');
 }
+
 
 render();
