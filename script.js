@@ -2,7 +2,7 @@ const posts = [
    { id: 8, title: "Learning English", date: "Dec 30, 2025", excerpt: " Today I started learning English.", content: "<h1>Why I Started Learning English</h1><p>If you want to be successful, you need to learn English. Today I started learning English. I made a plan with ChatGPT. It's day 1, so I don't fell much progress yet, but Iwill keep learning.</p>" },
    { id: 7, title: "v 0.1", date: "Dec 30, 2025", excerpt: "This is the first version of my blog website.", content: "<h1>Version 0.1 Is Here!</h1><p>I created a basic blog website. This is the first version. It's not professional yet, but i'm happy with it. I will post new blogs every week. </p>" },
    { id: 6, title: "Why I code every day", date: "Jan 1, 2026", excerpt: "Why I code every day? Here is the answer", content: "<h1>Why I want to code every day</h1><p>I code every day because it's really important to me. Daily coding is great practice, and this is how real development happens. If you want to become a succesful developer, you need to spend a lot od hours coding. About 1,5 years ago, I started coding in Python. I wrote very basic programs, like asking 'What is your name?' and then printing 'Hello  (your name). I also made a simple calculator. At that time, I thought coding was borint, so I  quit. After half year, I decided to start web development. In the first two months, I took learned basic HTML and CSS. After those two months, I took a break. In July, I  came back. And now, here we are. And Happy New Year    </p>" },
-    // { id: 5, title: "AI in Software Dev", date: "Nov 02, 2025", excerpt: "Leveraging LLMs to boost your daily coding productivity.", content: "<h1>AI Tools</h1><p>Review of Copilot and Cursor...</p>" },
+    { id: 9, title: "One week of learning English", date: "Jan 06, 2026", excerpt: "One week ago I started learning English", content: "<h1>1 week of learning English</h1><p>One week ago I started learning English. Why? It's very important for me, because if you want to be succesful developer you need to learn English. Right now I have 333 word cards. How I learn?I get 5-10 card and I write the English words into my notebook. After I write the word, I explain its meaning to myself, adn then I write 2 or 3 sentences using that word. <br> <br> This metod helps me understand and remember new words better </p>" },
     // { id: 4, title: "CSS Subgrid Guide", date: "Oct 20, 2025", excerpt: "Aligning complex layouts across nested components perfectly.", content: "<h1>CSS Subgrid</h1><p>The layout revolution...</p>" }
 ];
 
@@ -54,3 +54,4 @@ function openPost(id) {
 
 
 render();
+
